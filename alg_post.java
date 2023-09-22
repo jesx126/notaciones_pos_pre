@@ -1,10 +1,11 @@
 import java.util.Stack;
 
 public class alg_post{
-    public void ejecutarAlgoritmo(){
+    public static String postfix="";
+    public String ejecutarAlgoritmo(String expresion){
+       //String expresion=ConversorNotacion.textField.getText();
         Stack<Character> pilaPost = new Stack<>();
-            String expresion="2+4/5*(5-3)-5*4";
-            String postfix="";
+            
             int longitud = expresion.length();
             for(int i=0;i<longitud;i++){
                 if(expresion.charAt(i)>=48 && expresion.charAt(i)<=57){
@@ -59,7 +60,8 @@ public class alg_post{
                     pilaPost.pop();
                 }
             }
-            System.out.println("La notación postfija de la expresion: "+expresion+"\nes: "+postfix);
+            return postfix;
+            //System.out.println("La notación postfija de la expresion: "+expresion+"\nes: "+postfix);
     }
 
 }

@@ -59,6 +59,9 @@ public class ConversorNotacion extends JFrame {
                 // Agrega una nueva fila a la tabla con los resultados
                 Object[] rowData = {notacionInfija, notacionPostfija, notacionPrefija};
                 tableModel.addRow(rowData);
+                notacionInfija="";
+                notacionPostfija="";
+                notacionPrefija="";
             }
         });
     }

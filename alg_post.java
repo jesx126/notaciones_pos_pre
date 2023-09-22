@@ -1,11 +1,11 @@
 import java.util.Stack;
 
 public class alg_post{
-    public static String postfix="";
+    
     public String ejecutarAlgoritmo(String expresion){
        //String expresion=ConversorNotacion.textField.getText();
         Stack<Character> pilaPost = new Stack<>();
-            
+            String postfix="";
             int longitud = expresion.length();
             for(int i=0;i<longitud;i++){
                 if(expresion.charAt(i)>=48 && expresion.charAt(i)<=57){
